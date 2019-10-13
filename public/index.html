@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.2.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.2.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.2.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.2.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.2.0/firebase-storage.js"></script>
+    <script defer src="/__/firebase/7.2.0/firebase-firestore.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <title>Welcome to HuskyConnect!</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  </head>
+  <body>
+
+    <<!-- Header -->
+			<section id="header">
+          <header>
+            <h1>HuskyConnect</h1>
+            <p>Support for Success</p>
+          </header>
+          <p> This is a website for you to connect with peers and build support systems to succeed in your classes!</p>
+        </section>
+  
+      <!-- Banner -->
+        <section id="banner">
+          <header>
+            <h2>About </h2>
+          </header>
+          <p>		Developed by UW Seattle Students, this is a space for you to informally reach out to get help on classes and/or to help other students succeed in their coursework. Use the form below to fill out the classes you have taken, as well as the classes you are currently taking. Filling this out will allow you to connect with other UW Seattle students who have taken the class that can help you with the classes you are currently taking. </p>
+          <footer>
+          </footer>
+        </section>
+  
+      <section id="footer">
+        <ul class="icons">
+          <li><a href="https://myplan.uw.edu/home/#/"> <span class="ic-ticket" aria-hidden="true"></span>MyPlan Link</a></li>
+        </ul>
+      </section>
+          
+          <!-- Contact -->
+            <article class="container box style3">
+              <header>
+                <h2>HuskyConnect Form</h2>
+                <p>Fill out this form with relevant information regarding classes you have taken in the past and classes that you are currently taking. Please ensure that the course codes match the ones on UW Seattle's Course Catalog!</p>
+              </header>
+              <form method="post" action="info.html">
+                <div class="row gtr-50">
+                  <div class="col-6 col-12-mobile"><input oninput="updateUser(event)" type="text" class="text" name="Name" placeholder="Name" /></div>
+                  <div class="col-6 col-12-mobile"><input oninput="updateContact(event)" type="text" class="text" name="UW Email Address" placeholder="Email" /></div>
+                  <div class="col-12">
+                    <textarea oninput="updateTaken(event)" name="Courses Already Taken" placeholder="Courses Already Taken, Ex.: CSE142"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <textarea oninput="updateTaking(event)" name="Courses Currently Taking" placeholder="Courses Currently Taking, Ex.: CSE142"></textarea>
+                  <div class="col-12">
+                    <ul class="actions">
+                      <li><button >Submit</button> </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </article>
+  
+  
+      <section id="footer">
+        <ul class="icons">
+          <li><a href="https://myplan.uw.edu/home/#/"> <span class="ic-ticket" aria-hidden="true"></span>MyPlan Link</a></li>
+        </ul>
+      </section>
+
+
+    <script src="app.js">
+
+    </script>
+  </body>
+</html>
