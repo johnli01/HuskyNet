@@ -39,13 +39,3 @@ function updateTaking(e) {
     const myPost = db.collection('user').doc('personOne');
     myPost.update({ taking: e.target.value })
 }
-
-function updateEverything(e1, e2, e3, e4) {
-    const db = firebase.firestore();
-    const myPost = db.collection('user').doc('personOne');
-    myPost.update({ name: e1.target.value })
-    myPost.update({ contactInfo: e2.target.value })
-    myPost.update({ taken: e3.target.value })
-    myPost.update({ taking: e4.target.value })
-
-}
